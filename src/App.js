@@ -1,12 +1,13 @@
 import './App.css';
-import Contacto from './componentest/Contacto/Contacto';
+
 import Hero from './componentest/Hero/Hero';
+import Whatsapp from './componentest/whatsapp/Whatsapp';
 
 function App() {
   return (
     <>
      <Hero/>
-     <Contacto/>
+     <Whatsapp/>
     </>
   );
 }
