@@ -1,0 +1,28 @@
+.formulario-estilo{
+  width: 50%;
+  background-color: #EFEFEF;
+}
+
+.input-style{
+  outline: none;
+  border-bottom: 1px solid gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #EFEFEF;
+  width: 100%; 
+}
+
+.boton-contacto{
+  width: 30%;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--verde);
+  color: var(--blanco-letra);
+  font-weight: bolder;
+}
+
+.boton-contacto:hover{
+  opacity: 0.8;
+}
