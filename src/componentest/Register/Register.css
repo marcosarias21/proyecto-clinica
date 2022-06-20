@@ -6,7 +6,7 @@
 }
 
 .formulario-estilo{
-  background-color: #EFEFEF;
+  background-color: var(--gris-fondo);
   border-radius: 10px;
   font-weight: bold;
 }
@@ -25,8 +25,8 @@
   
   border-radius: 5px;
   border: none;
-  background-color: green;
-  color: #EFEFEF;
+  background-color: var(--verde);
+  color: var(--blanco-letra);
   font-weight: bolder;
 }
 .boton-contacto:hover{
