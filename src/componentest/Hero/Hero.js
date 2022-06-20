@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import './hero.css'
 import ImgMedicos from '../../Assets/Imagen medicos.png'
 import Logotipo from '../../Assets/Logotipo.png'
+import Whatsapp from '../whatsapp/Whatsapp'
 
 
 function Hero() {
