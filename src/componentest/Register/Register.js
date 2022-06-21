@@ -15,12 +15,9 @@ const Register = () => {
       }
     })
     const json = await resp.json()
-    console.log(json) 
-    if(!json) {
-      alert(json.message)
-    }else{
-      window.location.href = './areas'
-    } 
+    console.log(json)   
+    alert(json.message)
+   
   
 }
 
@@ -30,7 +27,7 @@ const Register = () => {
         <div className="img-container">
           <img className="img-tamaño" src={Logotipo} alt="logotipo.png" />
         </div>
-        <div className="formulario-contenedor">
+        <div className="formulario-contenedor-register">
           <form onSubmit={handleSubmit(onSubmit)} className= "form-className formulario-estilo d-flex flex-column">
               <h1 className="text-center fs-3 pt-3">Registro De Usuarios</h1>
               <div className="my-2 row justify-content-center pt">
@@ -76,7 +73,7 @@ const Register = () => {
                 </div>
               </div>        
               <div className="pb-2 mx-auto mb-5">             
-                <button type="submit" className="boton-contacto px-5 py-2">Registrarse</button>                
+                <button type="submit" className="boton-contacto-register px-5 py-2">Registrarse</button>                
               </div>           
           </form>      
         </div>

@@ -22,7 +22,7 @@
   width: 100%; 
 }
 
-.boton-contacto{   
+.boton-contacto-register{   
   border-radius: 5px;
   width: 100%;
   border: none;
@@ -30,7 +30,7 @@
   color: var(--blanco-letra);
   font-weight: bolder;
 }
-.boton-contacto:hover{
+.boton-contacto-register:hover{
   opacity: 0.8;
 }
 
@@ -39,7 +39,7 @@
   .img-container{   
     display: none; 
   }
-  .formulario-contenedor{
+  .formulario-contenedor-register{
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -63,7 +63,7 @@
   .img-tamaño{
     width: 450px;
   }
-  .formulario-contenedor{
+  .formulario-contenedor-register{
    display: flex;
    justify-content: center;   
   }  
@@ -79,7 +79,7 @@
     justify-content: space-evenly;
   }
 
-  .formulario-contenedor{
+  .formulario-contenedor-register{
     width: 50%;
   }
   .formulario-estilo{
