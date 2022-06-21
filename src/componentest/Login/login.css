@@ -1,5 +1,5 @@
-.bg-hero{
-  background-image: url(../../Assets/Hero\ bg.png);
+.bg-hero{ 
+  background-image: url(Images/Hero\ bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -69,6 +69,7 @@
   }  
   .formulario-estilo{
     padding:0px 15px;
+    width: 40%;
   }
 }
 
@@ -80,6 +81,10 @@
   }
 
   .formulario-contenedor{
-    width: 40%;
+    width: 30%;    
+  }
+  
+  .formulario-estilo{
+    padding: 0px 15px;    
   }
 }
