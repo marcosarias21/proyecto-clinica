@@ -7,7 +7,7 @@ import Nabvar from './componentest/Navbar/Navbar';
 function App() {
   return (
     <>
-      <Nabvar/>
+    <Nabvar/>
      <Hero/>
      <Contacto/>
      <Footer/>

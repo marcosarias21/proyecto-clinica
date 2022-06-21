@@ -4,7 +4,7 @@ import './boton1.css';
 const Boton1 = (props) => {
     return (
         <div>
-            <button class="btn btn-3" type="submit"> {props.name} </button>
+         <a href={props.link} > <button class="btn btn-3"> {props.name} </button> </a>
         </div>
     );
 };
