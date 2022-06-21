@@ -22,9 +22,9 @@
   width: 100%; 
 }
 
-.boton-contacto{ 
-  
+.boton-contacto{   
   border-radius: 5px;
+  width: 100%;
   border: none;
   background-color: var(--verde);
   color: var(--blanco-letra);
@@ -80,6 +80,9 @@
   }
 
   .formulario-contenedor{
-    width: 40%;
+    width: 50%;
+  }
+  .formulario-estilo{
+    width:70%;
   }
 }
