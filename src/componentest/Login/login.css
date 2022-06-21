@@ -1,5 +1,5 @@
 .bg-hero{ 
-  background-image: url(Images/Hero\ bg.png);
+  background-image: url(../../Assets/Hero\ bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -22,7 +22,7 @@
   width: 100%; 
 }
 
-.boton-contacto{ 
+.boton-contacto-login{ 
   
   border-radius: 5px;
   border: none;
@@ -30,7 +30,7 @@
   color: var(--blanco-letra);
   font-weight: bolder;
 }
-.boton-contacto:hover{
+.boton-contacto-login:hover{
   opacity: 0.8;
 }
 
@@ -39,7 +39,7 @@
   .img-container{   
     display: none; 
   }
-  .formulario-contenedor{
+  .formulario-contenedor-login{
     display: flex;
     justify-content: center;
     padding-top: 100px;
@@ -63,7 +63,7 @@
   .img-tamaño{
     width: 450px;
   }
-  .formulario-contenedor{
+  .formulario-contenedor-login{
    display: flex;
    justify-content: center;   
   }  
@@ -80,7 +80,7 @@
     justify-content: space-evenly;
   }
 
-  .formulario-contenedor{
+  .formulario-contenedor-login{
     width: 30%;    
   }
   
