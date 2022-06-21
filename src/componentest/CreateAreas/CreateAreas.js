@@ -25,7 +25,8 @@ function CreateAreas() {
       console.log(json)
       alert(`Area ${data.nombre} creada con exito!`)
       nombreInput.value= ''
-      imagenInput.value= ''  
+      imagenInput.value= ''
+      window.location.reload()  
     }
   }
 
