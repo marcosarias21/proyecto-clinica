@@ -4,3 +4,15 @@
     text-align: center;
     margin-top: auto;
 }
+
+p-5 {
+    padding: 1rem!important;
+}
+
+.button-redes-sociales, input, optgroup, select, textarea {
+    margin-left: 15px;
+}
+
+.bi {
+    margin-right: 4px;
+}
