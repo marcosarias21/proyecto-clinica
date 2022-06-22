@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/*' element={<ErrorPage/>}/>
+        <Route path='/404' element={<ErrorPage/>}/>
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />

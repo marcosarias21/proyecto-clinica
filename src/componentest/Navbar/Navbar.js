@@ -29,7 +29,7 @@ const Nabvar = () => {
                     <a class="nav-link text-dark active" href="/#">Especializaciones</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/#">Noticias</a>
+                    <a class="nav-link text-dark active" href="/404">Noticias</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-dark active" href="/#">Contacto</a>
