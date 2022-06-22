@@ -17,7 +17,8 @@ const Login = () => {
 
     const json = await resp.json()
     console.log(json)
-    alert(json.message)
+    const jsonStr = JSON.stringify(json)  
+    localStorage.setItem("Usuario" , jsonStr)  
     
   }
 
