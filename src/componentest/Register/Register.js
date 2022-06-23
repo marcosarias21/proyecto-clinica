@@ -32,43 +32,43 @@ const Register = () => {
               <h1 className="text-center fs-3 pt-3">Registro De Usuarios</h1>
               <div className="my-2 row justify-content-center pt">
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style me-1" id="nombre" aria-describedby="nombre" placeholder="Nombre completo" {...register("nombre" , {required: true})} />
+                  <input type="text" className="input-style-register me-1" id="nombre" aria-describedby="nombre" placeholder="Nombre completo" {...register("nombre" , {required: true})} />
                   {errors.nombre?.type === 'required' && <span>Este campo es obligatorio </span>}
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-5">
-                  <input type="text" className="input-style" id="date" placeholder="Fecha de nacimiento" {...register("fecha", {required: true})} />
+                  <input type="text" className="input-style-register" id="date" placeholder="Fecha de nacimiento" {...register("fecha", {required: true})} />
                   {errors.fecha?.type === 'required' &&<span>Este campo es obligatorio </span>}
                 </div>
               </div>
               <div className="my-2 row justify-content-center">        
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="number" className="input-style me-1" placeholder="DNI" id="exampleInputDNI" aria-describedby="DNI" {...register("dni", {required: true})}/> 
+                  <input type="number" className="input-style-register me-1" placeholder="DNI" id="exampleInputDNI" aria-describedby="DNI" {...register("dni", {required: true})}/> 
                   {errors.dni?.type === 'required' && <span>Este campo es obligatorio </span>}
                 </div> 
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style" name="direccion" id="direccion" placeholder="Dirección" {...register("direccion", {required: true})} />
+                  <input type="text" className="input-style-register" name="direccion" id="direccion" placeholder="Dirección" {...register("direccion", {required: true})} />
                   {errors.direccion?.type === 'required' && <span>Este campo es obligatorio </span>}
                 </div>               
               </div>
               <div className="my-2 row justify-content-center">
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style me-1" id="exampleInputLocalidad" placeholder="Localidad" {...register("localidad", {required: true})}/>
+                  <input type="text" className="input-style-register me-1" id="exampleInputLocalidad" placeholder="Localidad" {...register("localidad", {required: true})}/>
                   {errors.localidad?.type === 'required' && <span>Este campo es obligatorio </span>}
                 </div>
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style" id="exampleInputProvincia" placeholder="Provincia" {...register("provincia", {required: true})}/>
+                  <input type="text" className="input-style-register" id="exampleInputProvincia" placeholder="Provincia" {...register("provincia", {required: true})}/>
                   {errors.provincia?.type === 'required' &&<span>Este campo es obligatorio </span>}
                 </div>        
               </div>
               <div>
                 <div className="my-2 col-sm-12 col-lg-10 mx-auto">           
-                    <input type="text" className="input-style" name="email" id="email" placeholder="Email" {...register("email", {required: true})}/> 
+                    <input type="text" className="input-style-register" name="email" id="email" placeholder="Email" {...register("email", {required: true})}/> 
                     {errors.email?.type === 'required' && <span>Este campo es obligatorio </span>}           
                 </div>
                 <div className="my-2 pb-4 col-sm-12 col-lg-10 mx-auto">
-                  <input type="password" className="input-style" name="password" id="password" placeholder="Contraseña" {...register("contrasena", {required: true})}/>
+                  <input type="password" className="input-style-register" name="password" id="password" placeholder="Contraseña" {...register("contrasena", {required: true})}/>
                   {errors.contrasena?.type === 'required' && <span>Este campo es obligatorio </span>}  
-                  <input type="password" className="input-style mt-3" name="repeatpassword" id="repeatpassword" placeholder="Repetir Contraseña" {...register("repeatcontrasena", {required: true})}/> 
+                  <input type="password" className="input-style-register mt-3" name="repeatpassword" id="repeatpassword" placeholder="Repetir Contraseña" {...register("repeatcontrasena", {required: true})}/> 
                   {errors.repeatcontrasena?.type === 'required' && <span>Este campo es obligatorio </span>}         
                 </div>
               </div>        
