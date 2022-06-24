@@ -1,8 +1,11 @@
 import React from 'react'
+import "./turnos.css"
 
 function Turnos() {
   return (
-    <div>Turnos</div>
+    <div>
+      
+    </div>
   )
 }
 

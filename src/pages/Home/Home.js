@@ -1,5 +1,6 @@
 import React from 'react'
-import Contacto from '../../componentest/Contacto/Contacto'
+import About from '../../componentest/About/About'
+
 import Footer from '../../componentest/Footer/Foteer'
 import Hero from '../../componentest/Hero/Hero'
 import Nabvar from '../../componentest/Navbar/Navbar'
@@ -11,7 +12,9 @@ function Home() {
       <Nabvar/>
       <Hero/>
       <Whatsapp/>
-      <Contacto/>
+      <About/>
+     
+     
       <Footer/>
     </>
   )

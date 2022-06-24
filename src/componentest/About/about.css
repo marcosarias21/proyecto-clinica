@@ -1,0 +1,75 @@
+.a{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.a-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+
+.a-right{
+   
+    flex: 1;
+    margin-bottom: 90px;
+}
+
+.a-card.bg{
+    position: absolute;
+    height: 100px,
+   
+
+
+}
+
+.a-card{
+    width: 60%;
+    height: 70vh;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.a-title{
+     font-weight: 400;
+     margin:40px 30px;
+     
+}
+.a-desc{
+    margin:40px 30px;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    .a{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+        margin:40px 30px;
+
+    }
+    
+    .mapa{
+        width: 300px;
+        height: 300px;
+
+    }
+    
+    .a-card-bg {
+        margin:40px 30px;
+    }
+    .a-right{
+        padding: 20px;
+    }
+    
+}
