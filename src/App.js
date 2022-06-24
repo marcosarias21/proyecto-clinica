@@ -8,8 +8,8 @@ import Turnos from './pages/Turnos/Turnos';
 import LogInAdmin from './pages/LogInAdmin/LogInAdmin';
 import UsuariosConsultas from './pages/UsuariosConsultas/UsuariosConsultas';
 import TurnosConsultas from './pages/TurnosConsultas/TurnosConsultas';
-import AreasConsultas from './componentest/AreasConsulta/AreasConsultas';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import AltaDeServicios from './pages/AltaDeServicios/AltaDeServicios';
 function App() {
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
         <Route path='/login-administracion' element={<LogInAdmin />} />
         <Route path='/usuarios-consultas' element={<UsuariosConsultas />} />
         <Route path='/turnos-consultas' element={<TurnosConsultas />} />
-        <Route path='/areas-consultas' element={<AreasConsultas />} />
+        <Route path='/areas-consultas' element={<AltaDeServicios />} />
       </Routes>
     </>
   );
