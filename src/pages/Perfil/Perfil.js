@@ -8,13 +8,13 @@ function Perfil() {
     const userObj = JSON.parse(user)
     setUsuario(userObj.user)
     console.log(usuario)
-      console.log(userObj)
+    console.log(userObj)
     
   }
   
   useEffect(() => {
     getUser()    
-  }, [])
+  })
   
 
   return (
