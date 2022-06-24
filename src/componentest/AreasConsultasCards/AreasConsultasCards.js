@@ -36,6 +36,7 @@ function AreasConsultasCards(props) {
       }
     })
     const json = await del.json()
+    console.log(json.message)
     alert(`Area ${json.areaEliminada.nombre} eliminada`)
     window.location.reload()
   }

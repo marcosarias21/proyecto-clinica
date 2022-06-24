@@ -18,7 +18,7 @@ function AreasConsultas() {
   },[])
 
   return (
-    <section className='d-flex flex-column align-items-center justify-content-center container'>
+    <section className='container contenedor-cards-areas'>
       {
         data.map(item=> <AreasConsultasCards nombre={item.nombre} imagen={item.imagen} id={item._id} key={item._id}/>)
       }
