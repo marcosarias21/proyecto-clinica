@@ -16,7 +16,7 @@ function ErrorPage() {
         </div>
 
         <div className="h3">
-          <h3 >the page you are looking for not avaible!</h3>
+          <h3 >Sorry! Page not found</h3>
         </div>
 
         <div className="button">
