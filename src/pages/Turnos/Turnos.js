@@ -1,12 +1,17 @@
 import React from 'react'
-import "./turnos.css"
+import Navbar from '../../componentest/Navbar/Navbar'
+import Fondo from '../../componentest/Turn/Fondo'
+import Footer from '../../componentest/Footer/Foteer'
 
-function Turnos() {
+const Turnos = () => {
   return (
-    <div>
-      
+    <div> 
+      <Navbar/>
+      <Fondo/>
+      <Footer/>
     </div>
   )
 }
+  
 
 export default Turnos
