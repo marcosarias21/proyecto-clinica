@@ -1,0 +1,10 @@
+.contenedor-admin-content{
+  margin-left: 150px;
+}
+
+@media (max-width:991px){
+  .contenedor-admin-content{
+    margin-left: 0;
+    margin-top: 160px;
+  }
+}

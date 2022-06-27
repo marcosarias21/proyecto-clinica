@@ -1,8 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 
 function UsuariosConsultas() {
+  const inicio = ()=>{
+    const data = localStorage.getItem('Admin')
+    if(!data){
+      window.location.href='/login-administracion'
+      return
+    }
+  }
+  
+  useEffect(()=>{
+    inicio()
+  },[])
+
   return (
-    <div>UsuariosConsultas</div>
+    <>
+      <NavbarAdmin/>
+      <div className='contenedor-admin-content'>
+        UsuariosConsultas
+      </div>
+    </>
   )
 }
 
