@@ -18,6 +18,7 @@
    
     flex: 1;
     margin-bottom: 90px;
+   
 }
 
 .a-card.bg{
@@ -40,7 +41,8 @@
 
 .a-title{
      font-weight: 400;
-     margin:40px 30px;
+     margin:40px 40px;
+     font-weight: bold;
      
 }
 .a-desc{
@@ -56,12 +58,13 @@
         text-align: center;
         margin-top: 50px;
         margin:40px 30px;
+        height: 100vh;
 
     }
     
     .mapa{
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 200px;
 
     }
     
@@ -70,6 +73,11 @@
     }
     .a-right{
         padding: 20px;
+        
     }
-    
+    .a-desc{
+        
+        width: 350px;
+       
+    }
 }
