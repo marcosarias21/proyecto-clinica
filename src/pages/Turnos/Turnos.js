@@ -3,7 +3,7 @@ import Navbar from '../../componentest/Navbar/Navbar'
 import Fondo from '../../componentest/Turn/Fondo'
 import Footer from '../../componentest/Footer/Foteer'
 
-function Turnos() {
+const Turnos = () => {
   return (
     <div> 
       <Navbar/>
@@ -12,5 +12,6 @@ function Turnos() {
     </div>
   )
 }
+  
 
 export default Turnos
