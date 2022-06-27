@@ -4,7 +4,7 @@ import Logotipo from '../../Assets/Logotipo.png'
 import { useForm } from 'react-hook-form'
 
 const Login = () => {
-  const {register , handleSubmit , formState : {errors}} = useForm()
+  const {register , handleSubmit} = useForm()
 
   const onSubmit = async(data) =>{
     const resp = await fetch('http://localhost:8000/login' , {
