@@ -2,8 +2,9 @@ import React from 'react'
 import Navbar from '../../componentest/Navbar/Navbar'
 import Fondo from '../../componentest/Turn/Fondo'
 import Footer from '../../componentest/Footer/Foteer'
+import './turnos.css'
 
-function Turnos() {
+const Turnos = () => {
   return (
     <div> 
       <Navbar/>

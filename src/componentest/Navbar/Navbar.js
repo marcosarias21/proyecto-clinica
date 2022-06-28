@@ -35,10 +35,10 @@ const Nabvar = () => {
                     <a class="nav-link text-dark active" href="/#">Contacto</a>
                   </li>
                   <form class="d-flex">
-                    <Boton1 link="/#" name="Turnos" />
+                    <Boton1 link="../../pages/Turnos/Turnos.js" name="Turnos" />
                   </form>
                   <form class="d-flex">
-                    <Boton1  link="/#" name="Iniciar Sesion" />
+                    <Boton1 onClick={this.handleClick} href="../../pages/Turnos/Turnos.js" name="Iniciar Sesion" />
                   </form>
                 </ul>
               </div>
