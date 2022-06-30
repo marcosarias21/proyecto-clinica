@@ -10,6 +10,7 @@ import UsuariosConsultas from './pages/UsuariosConsultas/UsuariosConsultas';
 import TurnosConsultas from './pages/TurnosConsultas/TurnosConsultas';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AltaDeServicios from './pages/AltaDeServicios/AltaDeServicios';
+import AltaDeMedicos from './pages/AltaDeMedicos/AltaDeMedicos';
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/usuarios-consultas' element={<UsuariosConsultas />} />
         <Route path='/turnos-consultas' element={<TurnosConsultas />} />
         <Route path='/areas-consultas' element={<AltaDeServicios />} />
+        <Route path='/medicos-consultas' element={<AltaDeMedicos/>}/>
       </Routes>
     </>
   );
