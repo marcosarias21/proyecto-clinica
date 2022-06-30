@@ -38,7 +38,7 @@ const Nabvar = () => {
                     <Boton1 link="../../pages/Turnos/Turnos.js" name="Turnos" />
                   </form>
                   <form class="d-flex">
-                    <Boton1 onClick={this.handleClick} href="../../pages/Turnos/Turnos.js" name="Iniciar Sesion" />
+                    <Boton1 href="../../pages/Turnos/Turnos.js" name="Iniciar Sesion" />
                   </form>
                 </ul>
               </div>
