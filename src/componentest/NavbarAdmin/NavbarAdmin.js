@@ -15,7 +15,8 @@ function NavbarAdmin() {
       <div className='items-admin-container'>
         <Link to="/usuarios-consultas" className='items-navbar-admin'>Usuarios</Link>
         <Link to="/turnos-consultas" className='items-navbar-admin'>Turnos</Link>
-        <Link to="/areas-consultas" className='items-navbar-admin'>Altas de Servicios</Link>
+        <Link to="/areas-consultas" className='items-navbar-admin'>Altas de Areas</Link>
+        <Link to="/medicos-consultas" className='items-navbar-admin'>Altas de Medicos</Link>
       </div>
       <Link to='/' >
         <button className='boton-admin' title='volver a pagina de usuarios' onClick={deleteLocal}><FaSignOutAlt/></button>
