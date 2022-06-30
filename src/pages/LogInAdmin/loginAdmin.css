@@ -1,0 +1,98 @@
+.L{
+  height: 100vh;
+ 
+  display: flex;
+}
+
+
+.L-left{
+  flex: 1;
+
+}
+.L-right{
+  flex: 1;
+  position: relative;
+ 
+}
+.L-bg{
+  width: 30px;
+  height: 100%;
+  background-color: #1DB954;
+  position: absolute;
+}
+.L-form{
+  
+  padding: 90px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+form{
+  
+ 
+}
+input{
+  width: 70%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  margin: 10px 0px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.L-button{
+  
+  color: whitesmoke;
+    padding: 10px 20px;
+    background: #1DB954;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom:80px;
+    size: 800px;
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+
+.L-intro{
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.L-name{
+  font-size: 60px;
+}
+
+
+
+
+.L-img-container{
+height: 100vh;
+  display: flex;
+  align-items: flex-end;
+
+}
+
+.L-img{
+  height: 85vh;
+}
+
+
+  
+  .L-boton-text{
+      text-align: center;
+      border-radius: 1px;
+  }
+  
+  
+ 
+ 
