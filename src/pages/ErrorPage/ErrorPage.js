@@ -1,13 +1,13 @@
 import React from "react";
 import "./errorPage.css";
-import mogo from "../../Assets/Logotipo.png";
+import Logo from "../../Assets/Logotipo.png";
 
 function ErrorPage() {
   return (
     <div>
       <div className="error-page">
         <div>
-          <img src={mogo} className="img-404" alt="4445" />
+          <img src={Logo} className="img-404" alt="4445" />
         </div>
         <div className="box">
           <h2>

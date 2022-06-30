@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {useForm} from 'react-hook-form'
 import './logInAdmin.css'
@@ -43,4 +44,4 @@ function LogInAdmin() {
   )
 }
 
-export default LogInAdmin
+export default LogInAdmin;
