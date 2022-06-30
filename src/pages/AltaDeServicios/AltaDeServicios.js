@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import './altaDeServicios.css'
 import AreasConsultas from '../../componentest/AreasConsulta/AreasConsultas'
 import CreateAreas from '../../componentest/CreateAreas/CreateAreas'
+import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 
 function AltaDeServicios() {
+  
+  const inicio = ()=>{
+    const data = localStorage.getItem('Admin')
+    if(!data){
+      window.location.href='/login-administracion'
+      return
+    }
+  }
+
+  useEffect(()=>{
+    inicio()
+  },[])
+
   return (
     <>
-      <CreateAreas/>
-      <AreasConsultas/>
+      <NavbarAdmin/>
+      <div className='contenedor-admin-content'>
+        <CreateAreas/>
+        <AreasConsultas/>
+      </div>
     </>
   )
 }
