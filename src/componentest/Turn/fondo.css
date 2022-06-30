@@ -96,4 +96,29 @@
       height: 300px;
     }
   }
-  
+  @media (min-width:767px) and (max-width:819px) {
+    .hero-img-container{
+      padding-bottom: 450px;
+    }
+    .fondo-img{
+      height: 450px;
+    }
+    
+  }
+  @media (min-width:820px) and (max-width:1023px) {
+    .hero-img-container{
+      padding-bottom: 600px;
+    }
+    .fondo-img{
+      height: 450px;
+    }
+    
+  }
+
+  @media (min-width:1024px) {
+    
+    .fondo-img{
+      height: 650px;
+    }
+    
+  }
