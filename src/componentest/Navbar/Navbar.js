@@ -32,7 +32,7 @@ const Nabvar = () => {
                     <a class="nav-link text-dark active" href="/404">Noticias</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/#">Contacto</a>
+                    <a class="nav-link text-dark active" href="#contacto">Contacto</a>
                   </li>
                   <form class="d-flex">
                     <Boton1 link="../../pages/Turnos/Turnos.js" name="Turnos" />

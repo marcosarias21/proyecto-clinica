@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.misturnos{
+    height: 50vh;
+}
+.turnos{
+    width: 1200px;
+    height: 70px;
+    background-color: green;
+    margin: 40px 40px 40px 40px;
+    border-radius: 6px;
+
+}
+.wrapper{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.btn-prim{
+    background-color: red;
+    border: 5px;
+}
+
+
+
+.titulo{
+    background-color: green;
+    border: 5px;
+    padding: 20px 110px;
+    color:rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.bodi{
+
+    background-color: darkgrey;
+}
+.padre{
+   color: aliceblue;
+   display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.btn-primary{
+    
+    
+    background-color: green;
+    border: 5px;
+    position: relative;
+    border-radius: 5px;
+    padding: 20px 520px;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+@media screen and (max-width: 480px){
+    
+}
