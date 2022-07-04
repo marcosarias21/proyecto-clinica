@@ -4,13 +4,12 @@ import Navbar from '../../componentest/Navbar/Navbar'
 import Footer from '../../componentest/Footer/Foteer'
 import './turnos.css'
 import ImgMedicos from '../../Assets/Imagen medicos.png'
-// import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 
 
 const Turnos = () => {
 
-    const { register , handleSubmit } = useForm()
+    const { register , handleSubmit, formState: {errors} } = useForm()
     const onSubmit = (data) => {
       console.log (data);
     }
@@ -79,21 +78,25 @@ const Turnos = () => {
             medicos.map(medico=><option  classname='areas-listado' key={medico._id}>{medico.nombre}</option>)
            }
           </select>
-         <div>
-            <label>Fecha</label>
-            <input type="date" {...register('fecha')} />
+         <div className='mb-3'>
+            <label className='me-2 fw-bold'>Fecha</label>
+            <input className='input-style-registe' type="date" {...register('fecha', {required:true} )} />
+            {errors.fecha?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
-          <div>
-            <label>Hora</label>
-            <input type="text" {...register('hora')} />
+          <div className='mb-3'>
+            <label className='me-2 fw-bold'>Hora</label>
+            <input className='input-style-registe' type="text" {...register('hora', {required:true} )} />
+            {errors.hora?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
-          <div>
-            <label>Nombre del Paciente</label>
-            <input type="text" {...register('nombre')} />
+          <div className='mb-3'>
+            <label className='me-2 fw-bold'>Nombre del Paciente</label>
+            <input className='input-style-registe' type="text" {...register('nombre', {required:true} )} />
+            {errors.nombre?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
-          <div>
-            <label>Dni</label>
-            <input type="number" {...register('dni')} />
+          <div className='mb-3'>
+            <label className='me-2 fw-bold'>Dni</label>
+            <input className='input-style-registe' type="number" {...register('dni', {required:true} )} />
+            {errors.dni?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
           <button onClick={handleSubmit(onClick)} className='boton-alta-de-areas'>Solicitar</button>
         </form>
