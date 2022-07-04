@@ -33,7 +33,12 @@
 .boton-contacto-register:hover{
   opacity: 0.8;
 }
-
+.mensaje-error{
+  font-size: 10px;
+  color: var(--rojo);
+  margin: 0;
+  padding: 0;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
   .img-container{   

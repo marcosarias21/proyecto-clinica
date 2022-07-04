@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import AreasCards from "../AreasCards/AreasCards";
 
 const Areas = () => {
+
   const [data, getadata] = useState([]);
+
 
   const getAreas = async () => {
     const res = await fetch("http://localhost:8000/areas");

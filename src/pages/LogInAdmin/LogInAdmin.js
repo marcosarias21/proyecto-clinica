@@ -38,6 +38,8 @@ function LogInAdmin() {
               <input type="password" placeholder='Contraseña' className='login-admin-input'{...register('contrasena')}/>
             </div>
             <button className='login-admin-btn' onClick={handleSubmit(onSubmit)}>Iniciar sesión</button>
+            <p className='m-0 text-center'>Usuario: AdministracionCRC</p>
+            <p className='m-0 text-center'>Contraseña: AdministracionCRC</p>
           </form>
         </div>
       </div>
