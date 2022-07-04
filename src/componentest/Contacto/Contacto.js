@@ -17,7 +17,7 @@ function Contacto() {
   }
 
   return (
-    <section className='contacto container my-4'>
+    <section className='contacto container my-4 ' id= ' #contacto' >
       <h2 className='titulo-contacto'>Contacto</h2>
       <div className='formulario-contenedor'>
         <form className='formulario-contacto' ref={formRef} onSubmit={handleSubmit} id='formulario'>

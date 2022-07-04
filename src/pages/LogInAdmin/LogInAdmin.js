@@ -1,7 +1,7 @@
 
 import React from 'react'
 import {useForm} from 'react-hook-form'
-import './logInAdmin.css'
+import './loginAdmin.css'
 import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 
 function LogInAdmin() {
