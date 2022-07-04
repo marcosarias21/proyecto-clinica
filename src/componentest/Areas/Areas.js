@@ -19,7 +19,7 @@ const Areas = () => {
   }, []);
 
   return (
-    <div>
+    <div id="areas">
       <section class="bg-white py-4">
         <div class="container  pb-4">
           <h1 class="text-center text-black text-bolder my-2 display-2 pb-4 py-3">
