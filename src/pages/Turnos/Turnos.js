@@ -5,16 +5,24 @@ import Footer from '../../componentest/Footer/Foteer'
 import './turnos.css'
 import ImgMedicos from '../../Assets/Imagen medicos.png'
 // import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
+// import 'react-calendar/dist/Calendar.css';
 
 
 const Turnos = () => {
 
-    const { register , handleSubmit } = useForm()
-    const onSubmit = (data) => {
-      console.log (data);
+  const login =()=>{
+    const usuarios = JSON.parse(localStorage.getItem('Usuario'))
+    if(!usuarios){
+      window.location.href='/login'
     }
-  
+  }
+
+  useEffect(()=>{
+    login()
+  },[ ])
+
+
+    const { register , handleSubmit } = useForm()
     
     const [areas, setAreas] = useState([])
     
@@ -37,9 +45,7 @@ const Turnos = () => {
       const res = await fetch('http://localhost:8000/medicos')
       const json = await res.json()
       const jsonMedicos = json.medicos
-      console.log(jsonMedicos)
       let medicosFiltrados = jsonMedicos.filter (medFiltrados => medFiltrados.area === valorArea)
-      console.log (medicosFiltrados)
       setMedicos(medicosFiltrados)
     }
     
@@ -53,7 +59,8 @@ const Turnos = () => {
           }
        })
      const json = await resp.json()
-       alert(`Turno creado con exito!`)
+       alert(json.Message)
+       window.location.href='/perfil'
    } 
     
     return (
@@ -67,33 +74,33 @@ const Turnos = () => {
         <h2 className='hero-txt'>Pagina de Turnos</h2>
         <form className='/#'>
          {/* <Calendar/>   */}
-         <label className='fw-bold mt-2'>Seleccione el area de especialidad</label>
+         <label className='fw-bold mt-2'>Seleccione el area de especialidad:</label>
           <select onClick={getMedicos} className='area-listado-select'{...register('area')} id="valorArea" >
            {
             areas.map(area=><option  classname='areas-listado' key={area._id}>{area.nombre}</option>)
            }
           </select>
-          <label className='fw-bold mt-2'>Seleccione su medico</label>
+          <label className='fw-bold mt-2'>Seleccione su medico_</label>
           <select className='area-listado-select'{...register('medico')} >
            {
             medicos.map(medico=><option  classname='areas-listado' key={medico._id}>{medico.nombre}</option>)
            }
           </select>
          <div>
-            <label>Fecha</label>
+            <label>Fecha: </label>
             <input type="date" {...register('fecha')} />
           </div>
           <div>
-            <label>Hora</label>
+            <label>Hora: </label>
             <input type="text" {...register('hora')} />
           </div>
           <div>
-            <label>Nombre del Paciente</label>
+            <label>Nombre del Paciente: </label>
             <input type="text" {...register('nombre')} />
           </div>
           <div>
-            <label>Dni</label>
-            <input type="number" {...register('dni')} />
+            <label>Dni: </label>
+            <input type="number" {...register('dni')}/>
           </div>
           <button onClick={handleSubmit(onClick)} className='boton-alta-de-areas'>Solicitar</button>
         </form>

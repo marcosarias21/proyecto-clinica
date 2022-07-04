@@ -14,11 +14,18 @@ const Login = () => {
         'content-type': 'application/json'
       }
     })
-
     const json = await resp.json()
-    console.log(json)
-    const jsonStr = JSON.stringify(json)  
-    localStorage.setItem("Usuario" , jsonStr)  
+
+    if(resp.ok===false){
+      alert(json.message)
+      return
+    }else{
+      console.log(json)
+      const jsonStr = JSON.stringify(json)  
+      localStorage.setItem("Usuario" , jsonStr)
+      window.location.href='/perfil' 
+      }
+
     
   }
 
@@ -34,8 +41,8 @@ const Login = () => {
             <input type="text" className="input-style my-3" name="email" id="email" placeholder="Email" {...register("email" , {required: true})}/>   
             <input type="password" className="input-style my-3" name="password" id="password" placeholder="Contraseña" {...register("contrasena")}/>           
             <button type="submit" className="boton-contacto-login my-5 py-2">Loguearse</button>
-            <span className='text-center outline-non pb-5'>No tenes cuenta? <a  href='/#'>Registrese Aca</a></span>
-                           
+            <span className='text-center outline-non pb-5'>No tenes cuenta? <a  href='/register'>Registrese Aca</a></span>
+            <a  href='/login-administracion'>Pagina administrativa</a>                           
         </form>      
       </div>  
     </section>  

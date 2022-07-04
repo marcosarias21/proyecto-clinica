@@ -19,3 +19,8 @@
     margin-bottom: 10px;
 
 }
+
+.a-usuario{
+    text-decoration: none;
+    color: var(--Negro-letra);
+}

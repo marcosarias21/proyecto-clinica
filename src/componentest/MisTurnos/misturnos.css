@@ -1,15 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .misturnos{
     height: 50vh;
 }
 .turnos{
-    width: 1200px;
-    height: 70px;
-    background-color: green;
+    background-color: var(--verde);
     margin: 40px 40px 40px 40px;
     border-radius: 6px;
 
@@ -17,6 +10,7 @@
 .wrapper{
     padding: 10px 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     color: white;
@@ -25,8 +19,13 @@
 .btn-prim{
     background-color: red;
     border: 5px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
 }
-
+.btn-prim:hover{
+    opacity: 0.8;
+}
 
 
 .titulo{
@@ -51,18 +50,19 @@
 .btn-primary{
     
     
-    background-color: green;
-    border: 5px;
+    background-color: var(--verde);
     position: relative;
     border-radius: 5px;
-    padding: 20px 520px;
+    padding: 20px 50px;
     text-transform: uppercase;
     color:rgb(255, 255, 255);
     letter-spacing: 2px;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
 }
-@media screen and (max-width: 480px){
-    
+.btn-primary:hover{
+    color:rgb(255, 255, 255);
+    opacity: 0.8;
 }
