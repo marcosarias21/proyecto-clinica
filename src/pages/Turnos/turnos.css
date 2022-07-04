@@ -28,6 +28,16 @@
 .hero1-img{
   height: 85vh;
 }
+
+.input-style-registe{
+  outline: none;
+  border-bottom: 1px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%; 
+}
+
 @media (min-width:1439px){
 
   .hero-txt{
@@ -52,6 +62,7 @@
     margin: 100px 0 15px 0;
   }
   .hero-txt{
+    margin-top: 100px;
     margin-left: 0;
     width: 85%;
     font-size: 33px;
@@ -82,6 +93,7 @@
     margin: 45px 0 15px 0;
   }
   .hero-txt{
+    margin-top: 100px;
     margin-left: 0;
     width: 80%;
     text-align: center;
