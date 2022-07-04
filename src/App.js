@@ -11,6 +11,7 @@ import TurnosConsultas from './pages/TurnosConsultas/TurnosConsultas';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AltaDeServicios from './pages/AltaDeServicios/AltaDeServicios';
 import AltaDeMedicos from './pages/AltaDeMedicos/AltaDeMedicos';
+
 function App() {
   return (
     <>
