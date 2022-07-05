@@ -29,7 +29,7 @@ const Footer = () => {
           </button>
           </a>
           <hr></hr>
-          <h4>© Copyright 2022 | Clinica Rolling Code | Gral. Paz 576 CP 4000 - San Miguel De Tucumán, Tucumán, Argentina | Call Center +54 381 6880024  </h4>
+          <h4>© Copyright 2022 | Clinica Rolling Code | Gral. Paz 576 CP 4000 - San Miguel De Tucumán, Tucumán, Argentina | Call Center +54 381 6382021  </h4>
       </footer>
     )
   }

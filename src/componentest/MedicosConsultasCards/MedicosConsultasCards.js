@@ -4,6 +4,7 @@ import {useForm} from 'react-hook-form'
 
 
 function MedicosConsultasCards (props) {
+  const urlBE = process.env.REACT_APP_URL_BE
   const [editar, setEditar] = useState(false)
 
   const setEdit=()=>{
@@ -13,7 +14,7 @@ function MedicosConsultasCards (props) {
   const {register, handleSubmit} = useForm()
 
   const onClick = async (data)=>{
-    const resp = await fetch('http://localhost:8000/medicos', {
+    const resp = await fetch(`${urlBE}/medicos`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers:{
@@ -27,7 +28,7 @@ function MedicosConsultasCards (props) {
   }
 
   const eliminar = async(data)=>{
-    const del = await fetch('http://localhost:8000/medicos', {
+    const del = await fetch(`${urlBE}/medicos`, {
       method: 'DELETE',
       body: JSON.stringify(data),
       headers:{
@@ -43,7 +44,7 @@ function MedicosConsultasCards (props) {
 
 
   const getAreas= async ()=>{
-    const res = await fetch('http://localhost:8000/areas')
+    const res = await fetch(`${urlBE}/areas`)
     const json = await res.json()
     const jsonAreas = json.areas
     setAreas(jsonAreas)

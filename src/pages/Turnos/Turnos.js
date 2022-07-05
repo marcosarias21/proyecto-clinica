@@ -9,6 +9,7 @@ import ImgMedicos from '../../Assets/Imagen medicos.png'
 
 
 const Turnos = () => {
+  const urlBE = process.env.REACT_APP_URL_BE
 
   const login =()=>{
     const usuarios = JSON.parse(localStorage.getItem('Usuario'))
@@ -27,7 +28,7 @@ const Turnos = () => {
     const [areas, setAreas] = useState([])
     
     const getAreas= async ()=>{
-      const res = await fetch('http://localhost:8000/areas')
+      const res = await fetch(`${urlBE}/areas`)
       const json = await res.json()
       const jsonAreas = json.areas
       setAreas(jsonAreas)
@@ -40,9 +41,8 @@ const Turnos = () => {
     
     
     const getMedicos= async ()=>{
-      const valorArea = document.getElementById ('valorArea').value
-      console.log (valorArea)
-      const res = await fetch('http://localhost:8000/medicos')
+      const valorArea = document.getElementById ('valorArea').value      
+      const res = await fetch(`${urlBE}/medicos`)
       const json = await res.json()
       const jsonMedicos = json.medicos
       let medicosFiltrados = jsonMedicos.filter (medFiltrados => medFiltrados.area === valorArea)
@@ -51,7 +51,7 @@ const Turnos = () => {
     
     
     const onClick = async (data)=>{
-        const resp = await fetch('http://localhost:8000/turnos', {
+        const resp = await fetch(`${urlBE}/turnos`, {
           method: 'POST',
           body: JSON.stringify(data),
           headers:{

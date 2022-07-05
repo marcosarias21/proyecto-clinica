@@ -4,10 +4,12 @@ import Logotipo from '../../Assets/Logotipo.png'
 import { useForm } from 'react-hook-form'
 
 const Login = () => {
+  const urlBE = process.env.REACT_APP_URL_BE
+  console.log(urlBE)
   const {register , handleSubmit} = useForm()
 
   const onSubmit = async(data) =>{
-    const resp = await fetch('http://localhost:8000/login' , {
+    const resp = await fetch(`${urlBE}/login` , {
       method: "POST",
       body: JSON.stringify(data),
       headers:{
@@ -20,7 +22,6 @@ const Login = () => {
       alert(json.message)
       return
     }else{
-      console.log(json)
       const jsonStr = JSON.stringify(json)  
       localStorage.setItem("Usuario" , jsonStr)
       window.location.href='/perfil' 

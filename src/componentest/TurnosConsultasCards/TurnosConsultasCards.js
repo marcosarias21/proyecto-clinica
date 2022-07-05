@@ -3,10 +3,11 @@ import {useForm} from 'react-hook-form'
 
 
 function TurnosConsultasCards(props) {
+  const urlBE = process.env.REACT_APP_URL_BE
   const {register, handleSubmit} = useForm()
 
   const eliminar = async(data)=>{
-    const del = await fetch('http://localhost:8000/turnos', {
+    const del = await fetch(`${urlBE}/turnos`, {
       method: 'DELETE',
       body: JSON.stringify(data),
       headers:{

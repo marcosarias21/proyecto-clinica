@@ -3,13 +3,14 @@ import {useForm} from 'react-hook-form'
 import './createMedicos.css'
 
 function CreateMedicos() {
+  const urlBE = process.env.REACT_APP_URL_BE
   const {register, handleSubmit } = useForm()
 
   const onClick = async (data)=>{
     if (data.nombre===''|| data.areas==='') {
       alert('Debe completras ambos campos')
     } else {
-          const resp = await fetch('http://localhost:8000/medicos', {
+      const resp = await fetch(`${urlBE}/medicos`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers:{
@@ -25,7 +26,7 @@ function CreateMedicos() {
 
 
   const getAreas= async ()=>{
-    const res = await fetch('http://localhost:8000/areas')
+    const res = await fetch(`${urlBE}/areas`)
     const json = await res.json()
     const jsonAreas = json.areas
     setAreas(jsonAreas)
