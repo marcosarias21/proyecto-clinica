@@ -4,11 +4,11 @@ import { useState } from 'react'
 import MedicosConsultasCards from '../MedicosConsultasCards/MedicosConsultasCards'
 
 function MedicosConsultas() {
-
+  const urlBE = process.env.REACT_APP_URL_BE
   const [data , getadata] = useState([])
 
   const getAreas= async ()=>{
-    const res = await fetch('http://localhost:8000/medicos')
+    const res = await fetch(`${urlBE}/medicos`)
     const json = await res.json()
     getadata(json.medicos)
   }

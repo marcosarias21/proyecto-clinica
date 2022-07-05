@@ -3,7 +3,7 @@ import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 import TurnosConsultasCards from '../../componentest/TurnosConsultasCards/TurnosConsultasCards'
 
 function TurnosConsultas() {
-
+  const urlBE = process.env.REACT_APP_URL_BE
   const [data , getdata] = useState([])
 
 
@@ -13,7 +13,7 @@ function TurnosConsultas() {
       window.location.href='/login-administracion'
       return
     }else{
-      const res = await fetch('http://localhost:8000/turnos')
+      const res = await fetch(`${urlBE}/turnos`)
       const json = await res.json()
       getdata(json.turnos)
     }

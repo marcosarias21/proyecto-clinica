@@ -3,6 +3,7 @@ import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 import UsuariosConsultasCards from '../../componentest/UsuariosConsultasCards/UsuariosConsultasCards'
 
 function UsuariosConsultas() {
+  const urlBE = process.env.REACT_APP_URL_BE
   const [data , getdata] = useState([])
 
 
@@ -12,7 +13,7 @@ function UsuariosConsultas() {
       window.location.href='/login-administracion'
       return
     }else{
-        const res = await fetch('http://localhost:8000/register')
+        const res = await fetch(`${urlBE}/register`)
         const json = await res.json()
         getdata(json.registros)
     }

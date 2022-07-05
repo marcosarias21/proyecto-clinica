@@ -4,6 +4,7 @@ import {useForm} from 'react-hook-form'
 
 
 function UsuariosConsultasCards(props) {
+  const urlBE = process.env.REACT_APP_URL_BE
   const [editar, setEditar] = useState(false)
 
   const setEdit=()=>{
@@ -13,7 +14,7 @@ function UsuariosConsultasCards(props) {
   const {register, handleSubmit} = useForm()
 
   const onClick = async (data)=>{
-    const resp = await fetch('http://localhost:8000/register', {
+    const resp = await fetch(`${urlBE}/register`, {
       method: 'PUT',
       body: JSON.stringify(data),
       headers:{
@@ -27,7 +28,7 @@ function UsuariosConsultasCards(props) {
   }
 
   const eliminar = async(data)=>{
-    const del = await fetch('http://localhost:8000/register', {
+    const del = await fetch(`${urlBE}/register`, {
       method: 'DELETE',
       body: JSON.stringify(data),
       headers:{

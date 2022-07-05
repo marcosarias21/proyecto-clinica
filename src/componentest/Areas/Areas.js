@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import AreasCards from "../AreasCards/AreasCards";
 
 const Areas = () => {
+  const urlBE = process.env.REACT_APP_URL_BE 
 
   const [data, getadata] = useState([]);
 
 
   const getAreas = async () => {
-    const res = await fetch("http://localhost:8000/areas");
+    const res = await fetch(`${urlBE}/areas`);
     const json = await res.json();
     getadata(json.areas);
   };

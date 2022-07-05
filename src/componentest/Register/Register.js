@@ -5,18 +5,18 @@ import Logotipo from '../../Assets/Logotipo.png'
 import Nabvar from '../Navbar/Navbar';
 
 const Register = () => {
+  const urlBE = process.env.REACT_APP_URL_BE
   const { register , handleSubmit , formState: {errors} } = useForm()
 
   const onSubmit = async(data) => {
-    const resp = await fetch( 'http://localhost:8000/register', {
+    const resp = await fetch( `${urlBE}/register`, {
       method: 'POST',
       body: JSON.stringify(data),
       headers:{
         'content-type': 'application/json'
       }
     })
-    const json = await resp.json()
-    console.log(json)   
+    const json = await resp.json()      
     alert(json.message)
     window.location.href='/login' 
   

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import MisTurnosCards from "../MisTurnosCards/MisTurnosCards"
 
 const MisTurnos = () => {
+  const urlBE = process.env.REACT_APP_URL_BE
   const [turnosAsig, setturnosAsig] = useState(false)
   const [data , getdata] = useState([])
 
@@ -12,7 +13,7 @@ const MisTurnos = () => {
   const inicio = async ()=>{
       const usuario = JSON.parse(localStorage.getItem('Usuario'))
       const dni = usuario.user.dni
-      const res = await fetch('http://localhost:8000/turnos')
+      const res = await fetch(`${urlBE}/turnos`)
       const json = await res.json()
       const turnos =json.turnos
       let turnosfiltrados = turnos.filter(item=> item.dni == dni)

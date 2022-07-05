@@ -3,6 +3,7 @@ import {useForm} from 'react-hook-form'
 import './createAreas.css'
 
 function CreateAreas() {
+  const urlBE = process.env.REACT_APP_URL_BE
   const {register, handleSubmit } = useForm()
 
   const onClick = async (data)=>{
@@ -14,7 +15,7 @@ function CreateAreas() {
       imagenInput.value= ''  
       return
     }else{
-      const resp = await fetch('http://localhost:8000/areas', {
+      const resp = await fetch(`${urlBE}/areas`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers:{

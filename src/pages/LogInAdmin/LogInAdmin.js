@@ -6,10 +6,11 @@ import {useForm} from 'react-hook-form'
 import NavbarAdmin from '../../componentest/NavbarAdmin/NavbarAdmin'
 
 function LogInAdmin() {
+  const urlBE = process.env.REACT_APP_URL_BE
   const {register, handleSubmit } = useForm()
 
   const onSubmit = async (data)=>{
-    const resp = await fetch('http://localhost:8000/loginAdmin' , {
+    const resp = await fetch(`${urlBE}/loginAdmin` , {
       method: "POST",
       body: JSON.stringify(data),
       headers:{
