@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import './areasConsultasCard.css'
 import {useForm} from 'react-hook-form'
+import {MdEdit,MdSave,MdDelete} from 'react-icons/md'
+
 
 
 function AreasConsultasCards(props) {
@@ -44,33 +46,40 @@ function AreasConsultasCards(props) {
 
 
   return (
-    <section className='card-areas-consultas'>
-      <label>ID</label>
-      <input type="text" value={props.id} readOnly="readonly" className='input-areas-consultas' {...register('id')}/>
-      <label>Areas/Especialización</label>
-      {
-        editar?
-        <input type="text" className='input-areas-consultas' {...register('nombre')}/>
-        :
-        <input type="text" value={props.nombre} readOnly="readonly" className='input-areas-consultas'/>
-      }
-      <label>URL de la imagen de portada</label>
-      {
-        editar?
-        <input type="text" className='input-areas-consultas' {...register('imagen')}/>
-        :
-        <input type="text" value={props.imagen} readOnly="readonly"  className='input-areas-consultas'/>
-      }
-      <div>
-        {
-          editar?
-          <button className='areas-consultas-boton editar' onClick={handleSubmit(onClick)}>Guardar</button>
-          :
-          <button className='areas-consultas-boton editar' onClick={setEdit}>Editar</button>
-        }
-        <button className='areas-consultas-boton eliminar' onClick={handleSubmit(eliminar)}>Eliminar</button>
-      </div>
-    </section>
+    <>
+      <tbody>
+        <tr className='tabla-fila'>
+          <td className='d-none d-md-table-cell px-2'>
+            <input type="text" value={props.id} readOnly="readonly" className='input-tablas-consultas' {...register('id')}/>
+          </td>
+          <td className='px-2'>
+            {
+              editar?
+              <input type="text" className='input-tablas-consultas' {...register('nombre')}/>
+              :
+              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas'/>
+            }
+          </td>
+          <td className='px-2'>
+            {
+              editar?
+              <input type="text" className='input-tablas-consultas nombre' {...register('imagen')}/>
+              :
+              <input type="text" value={props.imagen} readOnly="readonly"  className='input-tablas-consultas nombre'/>
+            }
+          </td>
+          <td className='px-2'>
+            {
+              editar?
+              <button className='tablas-consultas-boton editar' onClick={handleSubmit(onClick)}><MdSave/></button>
+              :
+              <button className='tablas-consultas-boton editar' onClick={setEdit}><MdEdit/></button>
+            }
+            <button className='tablas-consultas-boton eliminar' onClick={handleSubmit(eliminar)}><MdDelete/></button>
+          </td>
+        </tr>
+      </tbody>
+    </>
   )
 }
 

@@ -16,7 +16,7 @@ function AltaDeServicios() {
 
   useEffect(()=>{
     inicio()
-  },[])
+  },[])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

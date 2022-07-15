@@ -1,0 +1,49 @@
+.input-tablas-consultas{
+  background-color: transparent;
+  border: none;
+  margin: 5px 5px 5px 0;
+  width: 120px;
+}
+.input-tablas-consultas:focus-visible{
+  outline: none;
+}
+.tablas-consultas-boton{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--blanco-letra);
+  margin: 5px 5px 5px 5px;
+}
+.email, .nombre{
+  width:250px;
+}
+.tabla-fila{
+  border-bottom: 1px solid  var(--negro-letra);
+}
+@media (min-width:577px) and (max-width: 1024px){
+  .tablas-consultas-boton{
+    padding: 5px;
+    margin: 5px 2px;
+  }
+  .input-tablas-consultas{
+    width: 70px;
+  }
+  .nombre{
+    width: 180px;
+  }
+  .email{
+    width:230px;
+  }  
+}
+@media (max-width: 576px){
+  .tablas-consultas-boton{
+    padding: 5px;
+    margin: 5px 2px;
+  }
+  .input-tablas-consultas{
+    width: 80px;
+  }
+  .email, .nombre{
+    width:150px;
+  }  
+}

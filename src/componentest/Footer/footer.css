@@ -1,16 +1,12 @@
 .foot {
-    background-color: #1DB954;
+    background-color: var(--verde);
     padding: 1em 0;
     text-align: center;
     margin-top: auto;
 }
 
-p-5 {
-    padding: 1rem!important;
-}
-
 .button-redes-sociales {
-    margin-left: 15px;
+    margin: 0 7px;
 }
 
 .bi {

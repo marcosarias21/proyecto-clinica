@@ -21,12 +21,12 @@ function MisTurnosCards(props) {
 
   return (
     <>
-    <div className='d-flex w-100 justify-content-between align-items-center flex-wrap'>
+    <div className='d-flex w-100 justify-content-between align-items-center flex-wrap my-1'>
         <input className='input-turnos-perfil' {...register('id')} value={props.id}/>
         <p className='m-0'>Area: {props.area}</p>
         <p className='m-0'>Doctor/a: {props.medico}</p>
         <p className='m-0'>Fecha: {props.fecha}</p>
-        <button onClick={handleSubmit(eliminar)} class="btn-prim">cancelar</button>
+        <button onClick={handleSubmit(eliminar)} className="btn-prim mt-1 mt-lg-0">cancelar</button>
     </div>
     </>
   )

@@ -17,24 +17,24 @@ const Areas = () => {
 
   useEffect(() => {
     getAreas();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div id="areas">
-      <section class="bg-white py-4">
-        <div class="container  pb-4">
-          <h1 class="text-center text-black text-bolder my-2 display-2 pb-4 py-3">
+      <section className="bg-white py-4">
+        <div className="container  pb-4">
+          <h1 className="text-center text-black text-bolder my-2 display-2 pb-4 py-3">
             Especialidades
           </h1>
           <div
-            class=" w-100 "
+            className=" w-100 "
             id="galleryAmenisties"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
             <div className="  d-flex flex-wrap justify-content-center w-100">
               {data.map((item) => (
-                <AreasCards imagen={item.imagen} nombre={item.nombre} />
+                <AreasCards imagen={item.imagen} nombre={item.nombre} key={item._id}/>
               ))}
             </div>
           </div>
