@@ -20,7 +20,7 @@ const Nabvar = () => {
 
   useEffect(()=>{
     login()
-  },[])
+  },[])// eslint-disable-line react-hooks/exhaustive-deps
 
   const logout=()=>{
     localStorage.clear('Usuario')

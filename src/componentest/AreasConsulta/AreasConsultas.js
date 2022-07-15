@@ -15,13 +15,23 @@ function AreasConsultas() {
 
   useEffect(()=>{
     getAreas()
-  },[])
+  },[])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section className='container contenedor-cards-areas'>
-      {
-        data.map(item=> <AreasConsultasCards nombre={item.nombre} imagen={item.imagen} id={item._id} key={item._id}/>)
-      }
+      <table className='tabla-consultas w-100 mb-5'>
+        <thead className='encabezado-tabla'>
+          <tr>
+            <th className='fw-bold d-none d-md-table-cell p-2'>ID</th>
+            <th className='fw-bold p-2'>Area</th>
+            <th className='fw-bold p-2'>Imagen</th>
+            <th></th>
+          </tr>
+        </thead>
+        {
+          data.map(item=> <AreasConsultasCards nombre={item.nombre} imagen={item.imagen} id={item._id} key={item._id}/>)
+        }
+    </table>
     </section>
   )
 }

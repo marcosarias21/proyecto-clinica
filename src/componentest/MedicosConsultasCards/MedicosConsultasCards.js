@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import {useForm} from 'react-hook-form'
+import {MdEdit,MdSave,MdDelete} from 'react-icons/md'
+
 
 
 function MedicosConsultasCards (props) {
@@ -52,41 +54,50 @@ function MedicosConsultasCards (props) {
 
   useEffect(()=>{
     getAreas()
-  }, [ ])
+  }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
 
   return (
-    <section className='card-areas-consultas'>
-      <label>ID</label>
-      <input type="text" value={props.id} readOnly="readonly" className='input-areas-consultas' {...register('id')}/>
-      <label>Medico/a</label>
-      {
-        editar?
-        <input type="text" className='input-areas-consultas' {...register('nombre')}/>
-        :
-        <input type="text" value={props.nombre} readOnly="readonly" className='input-areas-consultas'/>
-      }
-      <label>Area de especialidad</label>
-      {
-        editar?
-        <select className='area-listado-select'{...register('area')} >
-          {
-            areas.map(area=><option  classname='areas-listado' key={area._id}>{area.nombre}</option>)
-          }
-        </select>
-        :
-        <input type="text" value={props.area} readOnly="readonly"  className='input-areas-consultas'/>
-      }
-      <div>
-        {
-          editar?
-          <button className='areas-consultas-boton editar' onClick={handleSubmit(onClick)}>Guardar</button>
-          :
-          <button className='areas-consultas-boton editar' onClick={setEdit}>Editar</button>
-        }
-        <button className='areas-consultas-boton eliminar' onClick={handleSubmit(eliminar)}>Eliminar</button>
-      </div>
-    </section>
+    <>
+      <tbody>
+        <tr className='tabla-fila'>
+          <td className='px-2 d-none d-md-table-cell'>
+            <input type="text" value={props.id} readOnly="readonly" className='input-tablas-consultas' {...register('id')}/>
+          </td>
+          <td className='px-2'>
+            {
+              editar?
+              <input type="text" className='input-tablas-consultas nombre' {...register('nombre')}/>
+              :
+              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas nombre'/>
+            }
+          </td>
+          <td className='px-2'>
+            {
+              editar?
+              <select className='area-listado-select'{...register('area')} >
+                {
+                  areas.map(area=><option  classname='areas-listado' key={area._id}>{area.nombre}</option>)
+                }
+              </select>
+              :
+              <input type="text" value={props.area} readOnly="readonly"  className='input-tablas-consultas'/>
+            }
+          </td>
+          <td className='px-2'>
+            <div>
+              {
+                editar?
+                <button className='tablas-consultas-boton editar' onClick={handleSubmit(onClick)}><MdSave/></button>
+                :
+                <button className='tablas-consultas-boton editar' onClick={setEdit}><MdEdit/></button>
+                }
+                <button className='tablas-consultas-boton eliminar' onClick={handleSubmit(eliminar)}><MdDelete/></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </>
   )
 }
 

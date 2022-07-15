@@ -5,13 +5,13 @@
 }
 @media (min-width:320px) and (max-width: 425px) {
   .datos-resp{
-    margin-top: 120px;
+    margin-top: 70px;
   }
 }
 
 @media (min-width:767px) and (max-width: 1020px) {
   .datos-resp{
-    margin-top: 120px;
+    margin-top: 86px;
   }
   
 }

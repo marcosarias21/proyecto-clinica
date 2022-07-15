@@ -77,6 +77,9 @@
   .hero1-img{
     height: 45vh;
   }
+  .hero1{
+    height: 80vh;
+  }
 }
 @media (max-width: 576px){
   .hero-txt-container{
@@ -107,5 +110,8 @@
   }
   .hero1-img{
     height: 300px;
+  }
+  .hero1{
+    height: 100vh;
   }
 }

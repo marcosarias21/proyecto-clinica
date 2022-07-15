@@ -2,10 +2,10 @@ import React from 'react'
 
 function AreasCards(props) {
   return (
-    <div className='col-10 col-md-3 mx-1 '>
-        <div class="   ">
+    <div className='col-10 col-md-5 mx-1 '>
+        <div className="   ">
     <img
-      class="w-100"
+      className="w-100"
       src={props.imagen}
       alt=""
       data-bs-target="#carouselExampleA"

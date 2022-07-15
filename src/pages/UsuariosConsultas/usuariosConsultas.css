@@ -1,0 +1,9 @@
+.tabla-consultas{
+  background-color: var(--gris-fondo);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  width: 95%;
+}
+.encabezado-tabla{
+  background-color: var(--verde);
+}

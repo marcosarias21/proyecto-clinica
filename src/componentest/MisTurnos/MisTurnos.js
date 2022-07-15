@@ -16,7 +16,7 @@ const MisTurnos = () => {
       const res = await fetch(`${urlBE}/turnos`)
       const json = await res.json()
       const turnos =json.turnos
-      let turnosfiltrados = turnos.filter(item=> item.dni == dni)
+      let turnosfiltrados = turnos.filter(item=> parseInt(item.dni) === parseInt(dni))
       getdata(turnosfiltrados)
       if(!turnosfiltrados || (turnosfiltrados.length<=0)){
       setturnosAsig(false)
@@ -27,10 +27,10 @@ const MisTurnos = () => {
   
   useEffect(()=>{
     inicio()
-  },[])
+  },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="container" >
+    <div className="container my-5" >
       <h3 className="fw-bold">Mis Turnos</h3>
       <div className="misturnos">
       <div className="turnos">
@@ -38,13 +38,13 @@ const MisTurnos = () => {
         { turnosAsig?
           data.map(item=><MisTurnosCards key={item._id} id={item._id} area={item.area} medico={item.medico} fecha={item.fecha} />) 
           :
-         <h2>No tienes turnos asignados</h2>
+         <h2 className="m-0">No tienes turnos asignados</h2>
         }
         </div>
       </div >
       <div className="padre">
 
-      <a href="/turnos" class="btn-primary">Nuevo Turno</a>
+      <a href="/turnos" className="btn-primary fw-bold p-3">Nuevo Turno</a>
       </div>
       
     </div>

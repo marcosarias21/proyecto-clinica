@@ -34,7 +34,7 @@ function CreateMedicos() {
 
   useEffect(()=>{
     getAreas()
-  }, [ ])
+  }, [ ]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section className='container'>
@@ -45,7 +45,7 @@ function CreateMedicos() {
         <label className='fw-bold mt-2'>Seleccione el area de especialidad</label>
         <select className='area-listado-select'{...register('area')} >
           {
-            areas.map(area=><option  classname='areas-listado' key={area._id}>{area.nombre}</option>)
+            areas.map(area=><option  className='areas-listado' key={area._id}>{area.nombre}</option>)
           }
         </select>
         <button onClick={handleSubmit(onClick)} className='boton-alta-de-areas'>Agregar</button>

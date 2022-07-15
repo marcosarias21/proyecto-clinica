@@ -57,15 +57,7 @@
     font-size: 33px;
     text-align: center;
   }
-  .hero-img-container{
-    height: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-  }
-  .hero-img{
-    height: 45vh;
-  }
+
 }
 @media (max-width: 576px){
   .hero-txt-container{
@@ -87,13 +79,6 @@
     text-align: center;
     font-size: 22px;
   }
-  .hero-img-container{
-    height: auto;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center; 
-  }
-  .hero-img{
-    height: 300px;
-  }
+
+
 }
