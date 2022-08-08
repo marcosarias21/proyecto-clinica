@@ -34,11 +34,11 @@ const Register = () => {
               <h1 className="text-center fs-3 pt-3">Registro De Usuarios</h1>
               <div className="my-2 row justify-content-center pt">
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style-register me-1" id="nombre" aria-describedby="nombre" placeholder="Nombre completo" {...register("nombre" , {required: true})} />
+                  <input type="text" className="input-style-register me-1" id="nombre" aria-describedby="nombre" placeholder="Nombre completo" {...register("nombre" , {required: true})} maxLength='25'/>
                   {errors.nombre?.type === 'required' && <span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-5">
-                  <input type="text" className="input-style-register" id="date" placeholder="Fecha de nacimiento" {...register("fecha", {required: true})} />
+                  <input type="date" className="input-style-register" id="date" placeholder="Fecha de nacimiento" {...register("fecha", {required: true})} />
                   {errors.fecha?.type === 'required' &&<span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div>
               </div>
@@ -48,17 +48,17 @@ const Register = () => {
                   {errors.dni?.type === 'required' && <span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div> 
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style-register" name="direccion" id="direccion" placeholder="Dirección" {...register("direccion", {required: true})} />
+                  <input type="text" className="input-style-register" name="direccion" id="direccion" placeholder="Dirección" {...register("direccion", {required: true})}  maxLength='20'/>
                   {errors.direccion?.type === 'required' && <span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div>               
               </div>
               <div className="my-2 row justify-content-center">
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style-register me-1" id="exampleInputLocalidad" placeholder="Localidad" {...register("localidad", {required: true})}/>
+                  <input type="text" className="input-style-register me-1" id="exampleInputLocalidad" placeholder="Localidad" {...register("localidad", {required: true})} maxLength='25'/>
                   {errors.localidad?.type === 'required' && <span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div>
                 <div className="col-sm-6 col-md-6 col-lg-5">
-                  <input type="text" className="input-style-register" id="exampleInputProvincia" placeholder="Provincia" {...register("provincia", {required: true})}/>
+                  <input type="text" className="input-style-register" id="exampleInputProvincia" placeholder="Provincia" {...register("provincia", {required: true})} maxLength='20'/>
                   {errors.provincia?.type === 'required' &&<span className='mensaje-error'>Este campo es obligatorio </span>}
                 </div>        
               </div>

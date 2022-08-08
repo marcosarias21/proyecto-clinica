@@ -41,7 +41,7 @@ function CreateMedicos() {
     <div className='alta-de-areas'>
       <h2 className='titulo-alta-de-areas'>Alta de Medicos</h2>
       <form className='formulario-alta-de-areas'>
-        <input type="text" placeholder='Ingrese nombre completo del medico/a a agregar' {...register('nombre')}  className='input-alta-de-areas' id='input-nombre' required/>
+        <input type="text" placeholder='Ingrese nombre completo del medico/a a agregar' {...register('nombre')}  className='input-alta-de-areas' id='input-nombre' required maxLength='25'/>
         <label className='fw-bold mt-2'>Seleccione el area de especialidad</label>
         <select className='area-listado-select'{...register('area')} >
           {

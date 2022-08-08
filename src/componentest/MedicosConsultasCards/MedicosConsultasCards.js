@@ -67,9 +67,9 @@ function MedicosConsultasCards (props) {
           <td className='px-2'>
             {
               editar?
-              <input type="text" className='input-tablas-consultas nombre' {...register('nombre')}/>
+              <input type="text" className='input-tablas-consultas nombre' {...register('nombre')} maxLength='25'/>
               :
-              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas nombre'/>
+              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas nombre' maxLength='25'/>
             }
           </td>
           <td className='px-2'>
