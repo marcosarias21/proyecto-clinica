@@ -68,15 +68,18 @@ const Turnos = () => {
     let month = date.getMonth() + 1
     let year = date.getFullYear()
     
-    if(month < 10){
-      document.getElementById('fechaMinima').min =`${year}-0${month}-${day}`
+    if(month < 10 && day < 10){
+      document.getElementById('fechaMinima').min =`0${day}/0${month}/${year}`
+      console.log(`0${day}/0${month}/${year}`)
+    }else if(month < 10 && day >= 10){
+      document.getElementById('fechaMinima').min =`${day}/0${month}/${year}`
     }else{
-      document.getElementById('fechaMinima').min =`${year}-0${month}-${day}`
+      document.getElementById('fechaMinima').min =`${day}/${month}/${year}`
     }
    }
    useEffect(()=>{
     fecha()
-  },[])// eslint-disable-line react-hooks/exhaustive-deps
+  },[])
 
     
     return (
@@ -100,12 +103,12 @@ const Turnos = () => {
           </select>
          <div className='mb-3'>
             <label className='me-2 fw-bold'>Fecha</label>
-            <input className='input-style-registe' type="date" id='fechaMinima' min={' '} {...register('fecha', {required:true} )}  />
+            <input className='input-style-registe' type="date" id='fechaMinima' min={''} {...register('fecha', {required:true} )}  />
             {errors.fecha?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
           <div className='mb-3'>
             <label className='me-2 fw-bold'>Hora</label>
-            <input className='input-style-registe' type="text" {...register('hora', {required:true} )} />
+            <input className='input-style-registe' type="time" {...register('hora', {required:true} )}/>
             {errors.hora?.type === 'required' && <span className='text-danger ms-2'>Este campo es obligatorio </span>}
           </div>
           <div className='mb-3'>

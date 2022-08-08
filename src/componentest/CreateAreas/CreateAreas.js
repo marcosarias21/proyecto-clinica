@@ -36,7 +36,7 @@ function CreateAreas() {
     <div className='alta-de-areas'>
       <h2 className='titulo-alta-de-areas'>Alta de Areas/Especilizaciones</h2>
       <form className='formulario-alta-de-areas'>
-        <input type="text" placeholder='Ingrese Area/Especializacion nueva' {...register('nombre')}  className='input-alta-de-areas' id='input-nombre'/>
+        <input type="text" placeholder='Ingrese Area/Especializacion nueva' {...register('nombre')}  className='input-alta-de-areas' id='input-nombre' maxLength='20'/>
         <input type="text" placeholder='Ingrese URL de la imagen de portada' {...register('imagen')} className='input-alta-de-areas' id='input-imagen'/>
         <button onClick={handleSubmit(onClick)} className='boton-alta-de-areas'>Agregar</button>
       </form>

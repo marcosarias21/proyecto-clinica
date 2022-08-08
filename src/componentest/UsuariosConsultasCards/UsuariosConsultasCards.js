@@ -52,9 +52,9 @@ function UsuariosConsultasCards(props) {
           <td  className='px-2'>
             {
             editar?
-            <input type="text" className='input-tablas-consultas nombre' {...register('nombre')}/>
+            <input type="text" className='input-tablas-consultas nombre' {...register('nombre')} maxLength='25'/>
             :
-            <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas nombre'/>
+            <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas nombre' maxLength='25'/>
             }
           </td>
           <td className='px-2'>
@@ -68,17 +68,17 @@ function UsuariosConsultasCards(props) {
           <td className='px-2 d-none d-lg-table-cell'>
             {
             editar?
-            <input type="text" className='input-tablas-consultas' {...register('fecha')}/>
+            <input type="date" className='input-tablas-consultas' {...register('fecha')}/>
             :
-            <input type="text" value={props.fecha} readOnly="readonly"  className='input-tablas-consultas'/>
+            <input type="date" value={props.fecha} readOnly="readonly"  className='input-tablas-consultas'/>
             }
           </td>
           <td className='px-2 d-none d-lg-table-cell'>
             {
             editar?
-            <input type="text" className='input-tablas-consultas' {...register('provincia')}/>
+            <input type="text" className='input-tablas-consultas' {...register('provincia')} maxLength='20'/>
             :
-            <input type="text" value={props.provincia} readOnly="readonly"  className='input-tablas-consultas'/>
+            <input type="text" value={props.provincia} readOnly="readonly"  className='input-tablas-consultas' maxLength='20'/>
             }
           </td>
           <td className='px-2 d-none d-md-table-cell'>

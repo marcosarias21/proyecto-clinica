@@ -55,9 +55,9 @@ function AreasConsultasCards(props) {
           <td className='px-2'>
             {
               editar?
-              <input type="text" className='input-tablas-consultas' {...register('nombre')}/>
+              <input type="text" className='input-tablas-consultas' {...register('nombre')} maxLength='20'/>
               :
-              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas'/>
+              <input type="text" value={props.nombre} readOnly="readonly" className='input-tablas-consultas' maxLength='20'/>
             }
           </td>
           <td className='px-2'>
